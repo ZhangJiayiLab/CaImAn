@@ -36,11 +36,12 @@ WORKDIR /CaImAn/
 RUN conda env update -f environment.yml -n root
 #RUN conda install --file requirements_conda.txt
 #RUN pip install -r requirements_pip.txt
-RUN apt-get install libc6-i386
-RUN apt-get install -y libsm6 libxrender1
-RUN conda install pyqt=4.11.4
-RUN python setup.py install
-RUN python setup.py build_ext -i
+#RUN apt-get install libc6-i386
+#RUN apt-get install -y libsm6 libxrender1
+RUN source activate caiman && pip install .
+#RUN conda install pyqt=4.11.4
+#RUN python setup.py install
+#RUN python setup.py build_ext -i
 
 # RUN nosetests
 
