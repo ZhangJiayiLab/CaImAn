@@ -14,8 +14,8 @@ from distutils.command.build_ext import build_ext
 
 here = path.abspath(path.dirname(__file__))
 
-with open('README.md', 'r') as rmf:
-    readme = rmf.read()
+# with open('README.md', 'r') as rmf:
+#     readme = rmf.read()
 
 ############
 # This stanza asks for caiman datafiles (demos, movies, ...) to be stashed in "share/caiman", either
@@ -57,7 +57,7 @@ setup(
     url='https://github.com/simonsfoundation/CaImAn',
     license='GPL-2',
     description='Advanced algorithms for ROI detection and deconvolution of Calcium Imaging datasets.',
-    long_description=readme,
+    # long_description=readme,
     # See https://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
         # How mature is this project? Common values are
