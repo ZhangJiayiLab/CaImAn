@@ -33,17 +33,14 @@ RUN CONDA_SSL_VERIFY=false conda update pyopenssl
 # RUN git clone --recursive -b dev https://github.com/agiovann/Constrained_NMF.git
 ADD . /CaImAn
 WORKDIR /CaImAn/
-RUN conda env update -f environment.yml -n caiman
+RUN conda env update -f environment.yml
 #RUN conda install --file requirements_conda.txt
 #RUN pip install -r requirements_pip.txt
 #RUN apt-get install libc6-i386
 #RUN apt-get install -y libsm6 libxrender1
-RUN source activate caiman && pip install .
+RUN pip install .
 #RUN conda install pyqt=4.11.4
 #RUN python setup.py install
 #RUN python setup.py build_ext -i
 
 # RUN nosetests
-
-EXPOSE 8080
-EXPOSE 22
