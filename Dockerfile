@@ -34,6 +34,8 @@ RUN CONDA_SSL_VERIFY=false conda update pyopenssl
 ADD . /CaImAn
 WORKDIR /CaImAn/
 RUN conda env update -f environment.yml -n base
+RUN conda install tensorflow-gpu
+RUN conda update opencv
 #RUN conda install --file requirements_conda.txt
 #RUN pip install -r requirements_pip.txt
 #RUN apt-get install libc6-i386
