@@ -31,8 +31,8 @@ RUN CONDA_SSL_VERIFY=false conda update pyopenssl
 # RUN git clone --recursive -b agiovann-master https://github.com/valentina-s/Constrained_NMF.git
 # RUN git clone --recursive https://github.com/agiovann/Constrained_NMF.git
 # RUN git clone --recursive -b dev https://github.com/agiovann/Constrained_NMF.git
-git clone --depth 1 https://github.com/flatironinstitute/CaImAn.git
-cd CaImAn
+RUN git clone --depth 1 https://github.com/flatironinstitute/CaImAn.git
+RUN cd CaImAn
 # ADD . /CaImAn
 # WORKDIR /CaImAn/
 RUN conda env update -f environment.yml -n base
